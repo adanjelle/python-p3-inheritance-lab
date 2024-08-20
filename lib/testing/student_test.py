@@ -25,3 +25,11 @@ class TestStudent:
         my_student = Student("My", "Student")
         my_student.learn("New information")
         assert("New information" in my_student.knowledge)
+# testing/student_test.py
+
+from lib.student import Student
+from lib.user import User
+
+def test_is_subclass():
+    '''is a subclass of "User".'''
+    assert(User in Student.__bases__)
